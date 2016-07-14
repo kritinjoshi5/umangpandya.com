@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body ng-app="UmangPandyaApp" ng-controller="AppController" layout="row" >
+
+		<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+			<md-toolbar class="background-blue">
+				<div layout-padding>
+					<div><img src="img/icon.png" class="circular-image md-avatar logo-size"></div>
+					<div>Umang Pandya</div>
+					<a href="mailto:info@umangpandya.com" class="md-caption link-white">info@umangpandya.com
+						<md-tooltip md-direction="right">Refresh</md-tooltip>
+					</a>
+				</div>
+			</md-toolbar>
+			<md-content ng-controller="LeftCtrl">
+				<md-list-item ng-repeat="nav in navigationMenu" ng-click="changeRightScreen($index)">
+					<md-icon><i class="material-icons">{{nav.icon}}</i></md-icon>
+					<p>{{nav.name}}</p>
+				</md-list-item>
+				<!-- <md-divider></md-divider> -->
+			</md-content>
+		</md-sidenav>
+		
+		<md-content flex>
+
+
+			<md-toolbar hide-gt-sm class="transparent-background position-absolute background-transparent">
+				<md-button ng-click="openSidenav()" class="md-icon-button size48" aria-label="Settings">
+					<i class="material-icons font-color-white dp30">menu</i>
+				</md-button>
+			</md-toolbar>
+			
+
+
+			<section ng-controller="HomeCtrl" ng-if="currentHome == NAV_HOME" layout="column">
+				<div class="backdrop position-absolute background-blue"></div>
+				<div layout="column" layout-align="center center">
+					<md-card class="card-on-backdrop">
+						<div layout="row" layout-align="center center">
+							<md-button hide-xs ng-click="showPrevious()" class="md-fab md-mini md-accent dp40"><i class="material-icons">keyboard_arrow_left</i></md-button>
+							<div layout="column" flex>
+								<div layout="column" layout-align="center center">
+									<img ng-src="{{developmentType[selectedDeveloper].image}}" class="developer-image" layout-padding />
+									<div class="md-headline" layout-padding layout="row" layout-align="center center">{{developmentType[selectedDeveloper].name}}</div>
+								</div>
+								<div hide-gt-xs flex layout="row" layout-align="end none">
+									<md-button class="md-primary" ng-click="showPrevious()">Previous</md-button>
+									<md-button class="md-primary" ng-click="showNext()">Next</md-button>
+								</div>
+							</div>
+							<md-button hide-xs ng-click="showNext()" class="md-fab md-mini md-accent dp40"><i class="material-icons">keyboard_arrow_right</i></md-button>
+						</div>
+					</md-card>
+				</div>
+			</section>
+			
+
+
+			<section ng-controller="HomeCtrl" ng-if="currentHome == NAV_BLOGS" layout="column">
+				<div class="backdrop position-absolute background-yellow"></div>
+				<div layout="column" layout-align="center center">
+					<md-card class="card-on-backdrop" layout-align="center center">
+						Blogs
+					</md-card>
+				</div>
+			</section>
+			
+
+
+			<section ng-controller="VideoBlogsCtrl" ng-if="currentHome == NAV_VIDEO_BLOGS" layout="column">
+				<div class="backdrop position-absolute background-red"></div>
+				<div layout="column" layout-align="center center">
+
+					<md-card class="card-on-backdrop">
+
+						<md-content>
+							<md-list>
+
+								<md-list-item ng-repeat="channel in YouTubeChannel" ng-click="openLink(channel.link)">
+									<div layout="row" layout-xs="column" class="channel">
+										<img ng-src="{{channel.image}}" class="developer-thumbnail" />
+										<div class="md-list-item-text" layout="column">
+											<span class="md-headline">{{channel.title}}</span>
+											<span class="md-caption new-line">{{channel.description}}</span>
+											<div layout="row"><span ng-repeat="tag in channel.tags" class="tag"><span>{{tag}}</span></span></div>
+										</div>
+									</div>
+								</md-list-item>
+
+							</md-list>
+						</md-content>
+
+					</md-card>
+
+				</div>
+			</section>
+			
+
+
+			<section ng-controller="ChargesCtrl" ng-if="currentHome == NAV_CHARGES" layout="column">
+				<div ng-repeat="item in chargeList">
+					<div layout-padding class="md-title">{{item.name}}</div>
+					<div layout="row">
+						<md-card ng-repeat="detail in item.charges">
+
+							<md-content class="charges-block" style="background:url({{detail.image}}) no-repeat;background-size: 100%;">
+								<div layout-padding class="charge-sign background-black-gradient-top-to-bottom" flex>
+									<div class="md-headline">{{detail.title}}</div>
+									<div class="md-subhead">&#8377; {{detail.amount}}/hour</div>
+								</div>
+							</md-content>
+						</md-card>
+					</div>
+				</div>
+			</section>
+		
+
+
+		</md-content>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.js"></script>
+
+		<script src="js/app.js"></script> 
+	</body>
+</html>

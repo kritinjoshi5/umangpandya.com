@@ -1,0 +1,197 @@
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+.background-blue{
+	background: rgb(2,127,188); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(2,127,188,1) 0%, rgba(3,155,229,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(2,127,188,1) 0%,rgba(3,155,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(2,127,188,1) 0%,rgba(3,155,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#027fbc', endColorstr='#039be5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.background-red{
+	background: rgb(209,0,0); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(209,0,0,1) 0%, rgba(255,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(209,0,0,1) 0%,rgba(255,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(209,0,0,1) 0%,rgba(255,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d10000', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.background-yellow{
+	background: rgb(209,198,0); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(209,198,0,1) 0%, rgba(255,242,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(209,198,0,1) 0%,rgba(255,242,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(209,198,0,1) 0%,rgba(255,242,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1c600', endColorstr='#fff200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.background-black-gradient-top-to-bottom{
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+.background-black-gradient-bottom-to-top{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.4+30,0.8+100 */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+}
+
+.link-white{
+	color: white;
+	text-decoration: none;
+}
+
+.position-absolute{
+	position: absolute;
+}
+
+.backdrop{
+	width: 100%;
+	height: 400px;
+}
+.card-on-backdrop{
+	width: 550px;
+	margin-top: 230px;
+	z-index: 0;
+}
+
+.background-transparent{background-color: transparent !important;}
+
+.circular-image{
+	border-radius: 50%;
+}
+.logo-size{
+	width:60px;
+	height:60px;
+}
+
+.dp30{font-size: 30px;}
+.dp40{font-size: 40px;}
+.size48{width: 48px !important;height: 48px !important;}
+
+.font-color-white{
+	color:white;
+}
+
+.tag{
+	margin: 4px 4px 4px 0;
+	display: inline;
+}
+.tag > span{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px 8px;
+	background-color: #FD0000;
+	color: white;
+	border-radius: 15px;
+}
+
+.new-line{
+	white-space: pre;
+}
+
+
+/*.transparent-background { background-color: transparent !important; } */
+
+
+/* Navigation bar */
+
+
+
+
+
+/* Home */
+.developer-image{
+	width: 350px;
+	padding: 50px;
+}
+
+
+@media(max-width: 600px){
+	.card-on-backdrop{
+		width: 90%;
+		margin-top: 160px;
+	}
+	.backdrop{
+		height: 360px;
+	}
+}
+
+
+
+/* Video blogs */
+.developer-thumbnail{
+	width:150px;
+	height:83px;
+	margin-right: 16px;
+}
+.channel{
+	padding: 32px 16px 32px 32px !important;
+}
+.channel .md-list-item-text{
+	line-height: normal; /* forcing line height to not take  it from md-button */
+}
+
+@media(max-width: 380px){
+	.channel{
+		padding: 32px 0 !important;
+	}
+}
+
+
+/* Charges block */
+.charges-block{
+	width: 12em;
+	height: 16em;
+}
+
+.charge-sign{
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
