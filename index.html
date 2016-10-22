@@ -9,17 +9,17 @@
 	<body ng-app="UmangPandyaApp" ng-controller="AppController" layout="row" >
 
 		<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-			<md-toolbar class="background-blue">
+			<div class="background-blue">
 				<div layout-padding>
 					<div><img src="img/icon.png" class="circular-image md-avatar logo-size"></div>
-					<div>Umang Pandya</div>
+					<div class="md-title" style="color:white;">Umang Pandya</div>
 					<a href="mailto:info@umangpandya.com" class="md-caption link-white">info@umangpandya.com
 						<md-tooltip md-direction="right">Refresh</md-tooltip>
 					</a>
 				</div>
-			</md-toolbar>
+			</div>
 			<md-content ng-controller="LeftCtrl">
-				<md-list-item ng-repeat="nav in navigationMenu" ng-click="changeRightScreen($index)">
+				<md-list-item href="{{nav.url}}" ng-repeat="nav in navigationMenu" ng-click="changeRightScreen($index)">
 					<md-icon><i class="material-icons">{{nav.icon}}</i></md-icon>
 					<p>{{nav.name}}</p>
 				</md-list-item>
@@ -29,13 +29,15 @@
 		
 		<md-content flex>
 
-
-			<md-toolbar hide-gt-sm class="transparent-background position-absolute background-transparent">
+			<md-toolbar hide-gt-sm class="position-fixed toolbar-shadow" layout="row">
 				<md-button ng-click="openSidenav()" class="md-icon-button size48" aria-label="Settings">
 					<i class="material-icons font-color-white dp30">menu</i>
 				</md-button>
+				<span class="center-vertically">{{navTitle}}</span>
 			</md-toolbar>
 			
+
+			<md-toolbar hide-gt-sm class="background-transparent" style="z-index:-1;"></md-toolbar>
 
 
 			<section ng-controller="HomeCtrl" ng-if="currentHome == NAV_HOME" layout="column">
@@ -104,19 +106,48 @@
 
 
 			<section ng-controller="ChargesCtrl" ng-if="currentHome == NAV_CHARGES" layout="column">
-				<div ng-repeat="item in chargeList">
-					<div layout-padding class="md-title">{{item.name}}</div>
-					<div layout="row">
-						<md-card ng-repeat="detail in item.charges">
+				<div class="full-screen-view">
+					<div ng-repeat="item in chargeList">
+						<div layout-padding class="md-title">{{item.name}}</div>
+						<div layout="row">
+							<md-card ng-repeat="detail in item.charges">
 
-							<md-content class="charges-block" style="background:url({{detail.image}}) no-repeat;background-size: 100%;">
-								<div layout-padding class="charge-sign background-black-gradient-top-to-bottom" flex>
-									<div class="md-headline">{{detail.title}}</div>
-									<div class="md-subhead">&#8377; {{detail.amount}}/hour</div>
-								</div>
-							</md-content>
-						</md-card>
+								<md-content class="charges-block" style="background:url({{detail.image}}) no-repeat;background-size: 100%;">
+									<div layout-padding class="charge-sign background-black-gradient-top-to-bottom" flex>
+										<div class="md-headline">{{detail.title}}</div>
+										<div class="md-subhead">&#8377; {{detail.amount}}/hour</div>
+									</div>
+								</md-content>
+							</md-card>
+						</div>
 					</div>
+				</div>
+			</section>
+			
+
+
+			<section ng-controller="ContactMeCtrl" ng-if="currentHome == NAV_CONTACT_ME" class="lightest-gray" layout="column" style="height:100%;">
+				<div class="full-screen-view">
+
+					<div layout="row">
+						<div layout="column">
+							<image src="img/icon-big.png" class="circular-image md-avatar logo-big-size">
+							<span class="md-title">Umang Pandya</span>
+						</div>
+						<div layout="column">
+							<div>
+								<md-card>
+									<md-content>B</md-content>
+								</md-card>
+							</div>
+							<div>
+								<md-card>
+									<md-content>B</md-content>
+								</md-card>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</section>
 		
