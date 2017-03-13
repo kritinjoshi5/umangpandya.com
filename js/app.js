@@ -53,6 +53,12 @@
 				{ name: 'Contact me', icon: 'phone', 'url': '#/contact_me'}
 			];
 
+		$rootScope.clientTestimonials = [
+				{ client_photo:'img/icon.png', name:'Rahul Singh', designation:'Founder', company:'Ithaka', website:'www.ithaka.com', logo:'img/icon.png', comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'},
+				{ client_photo:'img/icon.png', name:'Rahul Singh', designation:'Founder', company:'Ithaka', website:'www.ithaka.com', logo:'img/icon.png', comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'},
+				{ client_photo:'img/icon.png', name:'Rahul Singh', designation:'Founder', company:'Ithaka', website:'www.ithaka.com', logo:'img/icon.png', comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'},
+			];
+
 		$scope.changeRightScreen = function($index){
 			$scope.currentHome = $index;
 			$scope.navTitle = $rootScope.navigationMenu[$index].name;
@@ -99,10 +105,7 @@
 
 
 		$scope.openSidenav = function () {
-			$mdSidenav('left').open()
-				.then(function () {
-					$log.debug("open LEFT is done");
-				});
+			$mdSidenav('left').open();
 		};
 	}
 
@@ -177,40 +180,40 @@
 			{
 				name: "Consulting",
 				charges:[
-							{ title: 'Consulting', amount: '1500', image:'img/charges/consulting.png' }
+							{ title: 'Consulting', amount: '2000', image:'img/charges/consulting.png' }
 						]
 			},
 			{
 				name: "Mobile apps",
 				charges:[
-							{ title: 'Android', amount: '600', image:'img/charges/android.png' },
-							{ title: 'iOS', amount: '900', image:'img/charges/ios.png' },
-							{ title: 'Hybrid app', amount: '500', image:'img/charges/hybrid.png' },
+							{ title: 'Android', amount: '1200', image:'img/charges/android.png' },
+							{ title: 'iOS', amount: '1200', image:'img/charges/ios.png' },
+							{ title: 'Hybrid app', amount: '1200', image:'img/charges/hybrid.png' },
 						]
 			},
 			{
 				name: "Front-end",
 				charges:[
-							{ title: 'Web designing', amount: '500', image: 'img/charges/web-development.png' },
+							{ title: 'Web designing', amount: '1200', image: 'img/charges/web-development.png' },
 						]
 			},
 			{
 				name: "Backend",
 				charges:[
-							{ title: 'Node.js', amount: '800', image: 'img/charges/nodejs.png' },
-							{ title: 'PHP Developer', amount: '600', image: 'img/charges/php-developer.png' },
+							{ title: 'Node.js', amount: '1200', image: 'img/charges/nodejs.png' },
+							{ title: 'PHP Developer', amount: '1200', image: 'img/charges/php-developer.png' },
 						]
 			},
 			{
 				name: "Misc",
 				charges:[
-							{ title: 'Server configuration', amount: '850', image:'img/charges/server.png' },
+							{ title: 'Server configuration', amount: '1500', image:'img/charges/server.png' },
 						]
 			},
 			{
 				name: "Design",
 				charges:[
-							{ title: 'Photoshop design', amount: '500', image:'img/charges/photoshop.png' },
+							{ title: 'Photoshop design', amount: '1200', image:'img/charges/photoshop.png' },
 						]
 			},
 		];

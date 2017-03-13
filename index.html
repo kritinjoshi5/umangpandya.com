@@ -14,7 +14,7 @@
 					<div><img src="img/icon.png" class="circular-image md-avatar logo-size"></div>
 					<div class="md-title" style="color:white;">Umang Pandya</div>
 					<a href="mailto:info@umangpandya.com" class="md-caption link-white">info@umangpandya.com
-						<md-tooltip md-direction="right">Refresh</md-tooltip>
+						<md-tooltip md-direction="right">Send Email</md-tooltip>
 					</a>
 				</div>
 			</div>
@@ -60,6 +60,26 @@
 						</div>
 					</md-card>
 				</div>
+				<!-- <div layout-lg="row" layout-md="column" layout-align="center center" class="testimonials">
+					<md-card flex="33" ng-repeat="testimonial in clientTestimonials" class="client-card">
+						<div layout="row" layout-align="center center">
+							<div layout="column">
+								<div layout="row" class="client-info" href="{{testimonial.website}}">
+									<img ng-src="{{testimonial.client_photo}}" class="client-image">
+									<div layout="column" style="width: 100%; margin-left: 15px;">
+										<span class="md-title">{{testimonial.name}}</span>
+										<span class="md-body-2">{{testimonial.company}}</span>
+										<span class="md-caption">{{testimonial.designation}}</span>
+									</div>
+									<img ng-src="{{testimonial.logo}}" class="md-avatar logo-small-size" class="client-logo">
+								</div>
+								<div class="client-comment">
+									<span>{{testimonial.comment}}</span>
+								</div>
+							</div>
+						</div>
+					</md-card>
+				</div> -->
 			</section>
 			
 
@@ -128,24 +148,21 @@
 
 			<section ng-controller="ContactMeCtrl" ng-if="currentHome == NAV_CONTACT_ME" class="lightest-gray" layout="column" style="height:100%;">
 				<div class="full-screen-view">
-
 					<div layout="row">
 						<div layout="column">
 							<image src="img/icon-big.png" class="circular-image md-avatar logo-big-size">
 							<span class="md-title">Umang Pandya</span>
+							<a href="tel:+91 99696 22998" class="md-subtitle link-black">Phone: +91 99696 22998</p>
 						</div>
-						<div layout="column">
+						<!-- <div layout="column">
 							<div>
 								<md-card>
-									<md-content>B</md-content>
+									<md-content>
+										
+									</md-content>
 								</md-card>
 							</div>
-							<div>
-								<md-card>
-									<md-content>B</md-content>
-								</md-card>
-							</div>
-						</div>
+						</div> -->
 					</div>
 
 				</div>
